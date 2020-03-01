@@ -126,6 +126,11 @@ extension PhotoListViewController {
         if let vc = segue.destination as? PhotoDetailViewController,
             let photo = viewModel.selectedPhoto {
             vc.imageUrl = photo.imageURL![0]
+            vc.imageNameL = photo.name
+            vc.imageDescription = photo.photoDescription
+            vc.imageRating = photo.rating!
+            vc.userNamex = photo.user?.username
+            vc.userCamerax = photo.camera
         }
     }
 }
